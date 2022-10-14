@@ -5,8 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Tic-Tac-Toe Game</title>
     <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Play Tic, Tac Toe</h1>
+      <p>
+        Built with html, css, javascript and -of course - lots of love
+        &#10084;...
+      </p>
+    </header>
+    <main>
+      <aside>
+        <h2>Choose Your Name:</h2>
+        <form>
+          <div>
+            <label for="playername">Player Name</label>
+            <input type="text" name="playername" id="playername" />
+          </div>
+          <div>
+            <button type="button">Cancel</button>
+            <button type="submit">Confirm</button>
+          </div>
+        </form>
+      </aside>
+      <section id="game-configuration">
+        <ol>
+          <li>
+            <article>
+              <h2>Player 1</h2>
+              <h3>PLAYER NAME</h3>
+              <p>X</p>
+              <button>Edit</button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2>Player 2</h2>
+              <h3>PLAYER NAME</h3>
+              <p>O</p>
+              <button>Edit</button>
+            </article>
+          </li>
+        </ol>
+        <button>Start New Game</button>
+      </section>
+      <section id="active-game">
+        <article>
+          <h3>You Won, <span id="winner-name">PLAYER NAME</span>!</h3>
+          <p>Click 'Start New Game' above, to start a new game.</p>
+        </article>
+
+        <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </section>
+    </main>
+  </body>
 </html>
