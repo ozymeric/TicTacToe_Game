@@ -10,12 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="overlays.css" />
-    <link rel="stylesheet" href="configuration.css" />
-    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/overlays.css" />
+    <link rel="stylesheet" href="css/configuration.css" />
+    <link rel="stylesheet" href="css/game.css" />
     <title>Tic-Tac-Toe Game</title>
-    <script src="app.js" defer></script>
+    <script src="javascript/config.js" defer></script>
+    <script src="javascript/game.js" defer></script>
+    <script src="javascript/app.js" defer></script>
   </head>
   <body>
     <div id="backdrop"></div>
@@ -48,7 +50,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player1-btn">Edit</button>
             </article>
           </li>
           <li>
@@ -56,7 +58,7 @@
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player2-btn">Edit</button>
             </article>
           </li>
         </ol>
