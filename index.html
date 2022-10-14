@@ -11,10 +11,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="overlays.css" />
+    <link rel="stylesheet" href="configuration.css" />
     <title>Tic-Tac-Toe Game</title>
     <script src="app.js" defer></script>
   </head>
   <body>
+    <div id="backdrop"></div>
+    <!-- This div above is set only for styling purposes. -->
     <header id="main-header">
       <h1>Play Tic, Tac Toe</h1>
       <p>
@@ -23,9 +27,9 @@
       </p>
     </header>
     <main>
-      <aside>
+      <aside class="modal" id="config-overlay">
         <h2>Choose Your Name:</h2>
-        <form>
+        <form class="form-control">
           <div>
             <label for="playername">Player Name</label>
             <input type="text" name="playername" id="playername" />
@@ -42,7 +46,7 @@
             <article>
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
-              <p>X</p>
+              <p class="player-symbol">X</p>
               <button class="btn btn-alt">Edit</button>
             </article>
           </li>
@@ -50,7 +54,7 @@
             <article>
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
-              <p>O</p>
+              <p class="player-symbol">O</p>
               <button class="btn btn-alt">Edit</button>
             </article>
           </li>
