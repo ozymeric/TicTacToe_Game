@@ -11,6 +11,13 @@ const editPlayer1BtnElement = document.getElementById("edit-player1-btn");
 const editPlayer2BtnElement = document.getElementById("edit-player2-btn");
 const cancelConfigBtnElement = document.getElementById("cancel-config-btn");
 
+const formElement = document.querySelector("form");
+const playerNameInput = document.querySelector("#playername");
+const playerNameConfirmBtn = document.getElementById("player-name-confirm-btn");
+
+const playerOneName = document.getElementById("playerOneName");
+const playerTwoName = document.getElementById("playerTwoName");
+
 editPlayer1BtnElement.addEventListener("click", openPlayerConfig);
 /* Note 01: 
     We can use the functions in a .js file, which are created or defined in other .js files. The only thing matters here is to place the .js file in which the function is defined; before the .js file in which the created function will be used, in the head section of our html file. */
@@ -20,3 +27,7 @@ cancelConfigBtnElement.addEventListener("click", closePlayerConfig);
 backdropElement.addEventListener("click", closePlayerConfig);
 /* Note 04:
     Because also when we click on the transparent black area on the .modal class div, we want the overlay window to be closed as well.*/
+
+formElement.addEventListener("submit", savePlayerConfig);
+
+// playerNameConfirmBtn.addEventListener("click", setPlayerName);
