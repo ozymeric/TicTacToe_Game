@@ -1,4 +1,11 @@
-function openPlayerConfig() {
+function openPlayerConfig(event) {
+  editedPlayer = +event.target.dataset.playerid;
+  //we added + because it turns our string data to an integer data.
+
+  // if data-player-id="1";
+  // then:
+  // const selectedPlayerId = event.target.dataset["player-id"];
+  // because it's not allowed to use dashes in dot notation.
   playerConfigOverlayElement.style.display = "block";
   backdropElement.style.display = "block";
 }
@@ -8,6 +15,7 @@ function closePlayerConfig() {
   backdropElement.style.display = "none";
   formElement.firstElementChild.classList.remove("error");
   errorsOutputElement.textContent = "";
+  formElement.firstElementChild.lastElementChild.value = "";
 }
 
 // ________ HANDLING FORM DATA:
@@ -23,4 +31,19 @@ function savePlayerConfig(event) {
     errorsOutputElement.textContent = "Please enter a valid name!";
     return;
   }
+
+  const updatedPlayerDataElement = document.getElementById(
+    "player-" + editedPlayer + "-data"
+  );
+  updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
+  // Now let's store the names of the players for a later use on declaring the winner.
+  // if (editedPlayer === 1) {
+  //   players[0].name = enteredPlayerName;
+  // } else {
+  //   players[1].name = enteredPlayerName;
+  // }
+  // _____or:
+  players[editedPlayer - 1].name = enteredPlayerName;
+
+  closePlayerConfig();
 }
