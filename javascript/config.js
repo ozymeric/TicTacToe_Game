@@ -30,11 +30,14 @@ function savePlayerConfig(event) {
     event.target.firstElementChild.classList.add("error");
     errorsOutputElement.textContent = "Please enter a valid name!";
     return;
+    //return keyword executes and stops the function here. When the if statement is true; this function gets executed and stops here. If not; we pass to the rest of the function.
   }
 
   const updatedPlayerDataElement = document.getElementById(
     "player-" + editedPlayer + "-data"
+    // here, the editedPlayer gets updated when we hit the edit button of the player, and it gets updated by the openPlayerConfig function above.
   );
+
   updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
   // Now let's store the names of the players for a later use on declaring the winner.
   // if (editedPlayer === 1) {
@@ -44,6 +47,7 @@ function savePlayerConfig(event) {
   // }
   // _____or:
   players[editedPlayer - 1].name = enteredPlayerName;
+  //We keep hold of the name of the enteredPlayerName in order to use it in the future to declare the winner name when the game is finished!
 
   closePlayerConfig();
 }
