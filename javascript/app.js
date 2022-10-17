@@ -31,6 +31,9 @@ const playerNameConfirmBtn = document.getElementById("player-name-confirm-btn");
 const playerOneName = document.getElementById("playerOneName");
 const playerTwoName = document.getElementById("playerTwoName");
 
+const startGameBtn = document.getElementById("start-game-btn");
+const activeGameArea = document.getElementById("active-game");
+
 const errorsOutputElement = document.getElementById("config-errors");
 editPlayer1BtnElement.addEventListener("click", openPlayerConfig);
 /* Note 01: 
@@ -44,4 +47,4 @@ backdropElement.addEventListener("click", closePlayerConfig);
 
 formElement.addEventListener("submit", savePlayerConfig);
 
-// playerNameConfirmBtn.addEventListener("click", setPlayerName);
+startGameBtn.addEventListener("click", startNewGame);
