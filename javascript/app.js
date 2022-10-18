@@ -40,6 +40,9 @@ const gameBoardElement = document.getElementById("game-board");
 // we can check this by typing "gameBoardElement.tagName;" to the console on the chrome dev tools.
 
 const errorsOutputElement = document.getElementById("config-errors");
+
+const activePlayerNameElement = document.getElementById("active-player-name");
+
 editPlayer1BtnElement.addEventListener("click", openPlayerConfig);
 /* Note 01: 
     We can use the functions in a .js file, which are created or defined in other .js files. The only thing matters here is to place the .js file in which the function is defined; before the .js file in which the created function will be used, in the head section of our html file. */
