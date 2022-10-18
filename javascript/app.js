@@ -34,7 +34,10 @@ const playerTwoName = document.getElementById("playerTwoName");
 
 const startGameBtn = document.getElementById("start-game-btn");
 const activeGameArea = document.getElementById("active-game");
-const gameFieldElements = document.querySelectorAll("#game-board li");
+// const gameFieldElements = document.querySelectorAll("#game-board li");
+const gameBoardElement = document.getElementById("game-board");
+// we can target the OL element with the game-board id like this.
+// we can check this by typing "gameBoardElement.tagName;" to the console on the chrome dev tools.
 
 const errorsOutputElement = document.getElementById("config-errors");
 editPlayer1BtnElement.addEventListener("click", openPlayerConfig);
@@ -51,6 +54,14 @@ formElement.addEventListener("submit", savePlayerConfig);
 
 startGameBtn.addEventListener("click", startNewGame);
 
-for (element of gameFieldElements) {
-  element.addEventListener("click", selectGameField);
-}
+// for (element of gameFieldElements) {
+//   element.addEventListener("click", selectGameField);
+// }
+// here we've added eventlisteners to all the li items individualy by using a "for of loop".
+// but actually we could have done this by targeting the "ol" element as well.
+// now let's check that:
+
+gameBoardElement.addEventListener("click", selectGameField);
+// now this will work ass well just like adding eventlisteners to all the list items one by one.
+// but there is only one slight problem with this solution. If we click on the boxes on the gameboard, everything works just fine; unless we click the gap betweeen boxes. Then the entire gameboard will disappear and we will see the sybols of players on a blank screen. Because we've written our function considering the li elements only. Befor it was working normally because there were no click listeners on the OL element which is the blank areas between boxes. But now as we've added the eventlistener to our OL element, when we click the child elements which are the LI items, everything works fine, but if we click the gaps, we will be clicking the OL item, and as we added the click listener to the OL element, it reacts, and executes our function.
+// We can solve this problem easily. Check the function ont the game.js:

@@ -15,8 +15,14 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-  event.target.textContent = players[activePlayer].symbol;
-  // now, only by changing the activePlayer value, we can change the player symbol on the gameboard.
-  event.target.classList.add("disabled");
-  switchPlayer();
+  console.log(event.target.tagName);
+  // we can see on the console which tag we click.
+  // now we will create a logic which will be executable only if the "LI" item is clicked!
+  if (event.target.tagName === "LI") {
+    event.target.textContent = players[activePlayer].symbol;
+    // now, only by changing the activePlayer value, we can change the player symbol on the gameboard.
+    event.target.classList.add("disabled");
+    switchPlayer();
+  }
+  // Now that solves our problem
 }
