@@ -5,3 +5,18 @@ function startNewGame() {
   }
   activeGameArea.style.display = "block";
 }
+
+function switchPlayer() {
+  if (activePlayer === 0) {
+    activePlayer = 1;
+  } else {
+    activePlayer = 0;
+  }
+}
+
+function selectGameField(event) {
+  event.target.textContent = players[activePlayer].symbol;
+  // now, only by changing the activePlayer value, we can change the player symbol on the gameboard.
+  event.target.classList.add("disabled");
+  switchPlayer();
+}
