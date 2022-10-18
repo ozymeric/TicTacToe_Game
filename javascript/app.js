@@ -1,3 +1,9 @@
+const gameData = [
+  [0,0,0],
+  [0,0,0],
+  [0,0,0]
+]
+
 let editedPlayer = 0;
 let activePlayer = 0;
 
@@ -14,7 +20,7 @@ const players = [
 
 const playerConfigOverlayElement = document.getElementById("config-overlay");
 const backdropElement = document.getElementById("backdrop");
-/* Note 02: 
+/* Note 02:
     These constants will be used within the functions which are created inside the config.js file but on the head section of our html file, config.js comes before this app.js file. So will this work? Will the functions in config.js file be able to see these constants?
 
     The answer is "Yes"! Because of the order we use inside thsi app.js file. We created or determined our constants up here before our eventlisteners down below.
@@ -44,7 +50,7 @@ const errorsOutputElement = document.getElementById("config-errors");
 const activePlayerNameElement = document.getElementById("active-player-name");
 
 editPlayer1BtnElement.addEventListener("click", openPlayerConfig);
-/* Note 01: 
+/* Note 01:
     We can use the functions in a .js file, which are created or defined in other .js files. The only thing matters here is to place the .js file in which the function is defined; before the .js file in which the created function will be used, in the head section of our html file. */
 editPlayer2BtnElement.addEventListener("click", openPlayerConfig);
 
