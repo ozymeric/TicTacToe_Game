@@ -42,10 +42,49 @@ function selectGameField(event) {
     selectedField.textContent = players[activePlayer].symbol;
     selectedField.classList.add("disabled");
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
+    console.log(gameData);
 
-    switchPlayer();
     checkForWinner();
+    switchPlayer();
   }
+}
+
+//*************************************************************************************************
+//*************************************************************************************************
+//*************************************************************************************************
+
+function resetGameBoard() {
+  // clearing player symbols from the board:
+  document.querySelector("#game-board li:nth-of-type(1)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(2)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(3)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(4)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(5)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(6)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(7)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(8)").textContent = "";
+  document.querySelector("#game-board li:nth-of-type(9)").textContent = "";
+  // removing the disabled class from clicked boxes:
+  document.querySelector("#game-board li:nth-of-type(1)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(2)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(3)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(4)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(5)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(6)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(7)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(8)").classList.remove("disabled");
+  document.querySelector("#game-board li:nth-of-type(9)").classList.remove("disabled");
+  // setting player records from gamedata:
+  gameData[0][0] = 0;
+  gameData[0][1] = 0;
+  gameData[0][2] = 0;
+  gameData[1][0] = 0;
+  gameData[1][1] = 0;
+  gameData[1][2] = 0;
+  gameData[2][0] = 0;
+  gameData[2][1] = 0;
+  gameData[2][2] = 0;
+  // the gameboard is restored to its default state now.
 }
 
 //*************************************************************************************************
