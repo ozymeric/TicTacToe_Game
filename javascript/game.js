@@ -49,10 +49,25 @@ function selectGameField(event) {
 function checkForWinner() {
   let clickedBox = gameData[event.target.dataset.row -1][event.target.dataset.col -1];
 
-  // __________________________________PLAYER 1 SCENARIO:
+   // __________________________________TIE SCENARIO:
  
-   if (clickedBox > 0 && clickedBox === 1) {
-    // ROWS LOGIC:
+    if ( clickedBox > 0 &&
+        document.querySelector("#game-board li:nth-of-type(1)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(2)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(3)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(4)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(5)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(6)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(7)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(8)").textContent &&
+        document.querySelector("#game-board li:nth-of-type(9)").textContent
+      ){
+        console.log("It's a tie !!!");
+      }
+   // __________________________________PLAYER 1 SCENARIO:
+    
+   // ROWS LOGIC:
+    else if (clickedBox > 0 && clickedBox === 1) {
     if (
       gameData[0][0] === gameData[0][1] && 
       gameData[0][1] === gameData[0][2] &&
