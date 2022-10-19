@@ -17,9 +17,6 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-  console.log(event.target.tagName);
-  // we can see on the console which tag we click.
-  // now we will create a logic which will be executable only if the "LI" item is clicked!
   if (event.target.tagName === "LI") {
     const selectedField = event.target;
 
@@ -38,9 +35,120 @@ function selectGameField(event) {
     selectedField.classList.add("disabled");
 
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
-    console.log(gameData);
+    // console.log(gameData);
+
 
     switchPlayer();
+
+    checkForWinner();
+
   }
   // Now that solves our problem
+}
+
+function checkForWinner() {
+  let clickedBox = gameData[event.target.dataset.row -1][event.target.dataset.col -1];
+
+  // __________________________________PLAYER 1 SCENARIO:
+ 
+   if (clickedBox > 0 && clickedBox === 1) {
+    // ROWS LOGIC:
+    if (
+      gameData[0][0] === gameData[0][1] && 
+      gameData[0][1] === gameData[0][2] &&
+      gameData[0][2] === 1) {
+      console.log(playerOneName.textContent + " WINS !!!");
+    } else if (
+      gameData[1][0] === gameData[1][1] && 
+      gameData[1][1] === gameData[1][2] &&
+      gameData[1][2] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    } else if (
+      gameData[2][0] === gameData[2][1] && 
+      gameData[2][1] === gameData[2][2] &&
+      gameData[2][2] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    }
+    // COLUMNS LOGIC:
+    else if (
+      gameData[0][0] === gameData[1][0] && 
+      gameData[1][0] === gameData[2][0] &&
+      gameData[2][0] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    } else if (
+      gameData[0][1] === gameData[1][1] && 
+      gameData[1][1] === gameData[2][1] &&
+      gameData[2][1] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    } else if (
+      gameData[0][2] === gameData[1][2] && 
+      gameData[1][2] === gameData[2][2] &&
+      gameData[2][2] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    }
+    // DIAGONAL LOGIC:
+    else if (
+      gameData[0][0] === gameData[1][1] && 
+      gameData[1][1] === gameData[2][2] &&
+      gameData[2][2] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    } else if (
+      gameData[0][2] === gameData[1][1] && 
+      gameData[1][1] === gameData[2][0] &&
+      gameData[2][0] === 1) {
+        console.log(playerOneName.textContent + " WINS !!!");
+    }
+
+  
+   // __________________________________PLAYER 2 SCENARIO:
+  
+  } else if (clickedBox > 0 && clickedBox === 2) {
+    // ROWS LOGIC:
+    if (
+      gameData[0][0] === gameData[0][1] && 
+      gameData[0][1] === gameData[0][2] &&
+      gameData[0][2] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+    } else if (
+      gameData[1][0] === gameData[1][1] && 
+      gameData[1][1] === gameData[1][2] &&
+      gameData[1][2] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+
+    } else if (
+      gameData[2][0] === gameData[2][1] && 
+      gameData[2][1] === gameData[2][2] &&
+      gameData[2][2] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+      }
+    // COLUMNS LOGIC:
+    else if (
+      gameData[0][0] === gameData[1][0] && 
+      gameData[1][0] === gameData[2][0] &&
+      gameData[2][0] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+      } else if (
+      gameData[0][1] === gameData[1][1] && 
+      gameData[1][1] === gameData[2][1] &&
+      gameData[2][1] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+      } else if (
+      gameData[0][2] === gameData[1][2] && 
+      gameData[1][2] === gameData[2][2] &&
+      gameData[2][2] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+      }
+    // DIAGONAL LOGIC:
+    else if (
+      gameData[0][0] === gameData[1][1] && 
+      gameData[1][1] === gameData[2][2] &&
+      gameData[2][2] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+      } else if (
+      gameData[0][2] === gameData[1][1] && 
+      gameData[1][1] === gameData[2][0] &&
+      gameData[2][0] === 2) {
+      console.log(playerTwoName.textContent + " WINS !!!");
+      }
+  }
 }
