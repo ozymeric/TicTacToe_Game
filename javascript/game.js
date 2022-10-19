@@ -43,7 +43,6 @@ function selectGameField(event) {
     selectedField.textContent = players[activePlayer].symbol;
     selectedField.classList.add("disabled");
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
-    console.log(gameData);
 
     checkForWinner();
     switchPlayer();
@@ -250,7 +249,5 @@ function checkForWinner() {
 //*************************************************************************************************
 
 function nineRounds() {
-  roundCount++;
-  console.log(roundCount);
-  startNewGame();
+
 }

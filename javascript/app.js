@@ -6,7 +6,7 @@ const gameData = [
 
 let editedPlayer = 0;
 let activePlayer = 0;
-let roundCount = 0;
+let roundCount = 1;
 
 
 const players = [
@@ -66,7 +66,7 @@ backdropElement.addEventListener("click", closePlayerConfig);
 
 formElement.addEventListener("submit", savePlayerConfig);
 
-startGameBtn.addEventListener("click", nineRounds);
+startGameBtn.addEventListener("click", startNewGame);
 
 // for (element of gameFieldElements) {
 //   element.addEventListener("click", selectGameField);
