@@ -6,6 +6,8 @@ const gameData = [
 
 let editedPlayer = 0;
 let activePlayer = 0;
+let roundCount = 0;
+
 
 const players = [
   {
@@ -22,6 +24,7 @@ const playerConfigOverlayElement = document.getElementById("config-overlay");
 const backdropElement = document.getElementById("backdrop");
 const gameOverElement = document.getElementById("game-result");
 const gameOverElementText = document.getElementById("gamee");
+const nextRoundButton = document.getElementById("next-round-btn");
 /* Note 02:
     These constants will be used within the functions which are created inside the config.js file but on the head section of our html file, config.js comes before this app.js file. So will this work? Will the functions in config.js file be able to see these constants?
 
@@ -63,7 +66,7 @@ backdropElement.addEventListener("click", closePlayerConfig);
 
 formElement.addEventListener("submit", savePlayerConfig);
 
-startGameBtn.addEventListener("click", startNewGame);
+startGameBtn.addEventListener("click", nineRounds);
 
 // for (element of gameFieldElements) {
 //   element.addEventListener("click", selectGameField);
@@ -76,3 +79,5 @@ gameBoardElement.addEventListener("click", selectGameField);
 // now this will work ass well just like adding eventlisteners to all the list items one by one.
 // but there is only one slight problem with this solution. If we click on the boxes on the gameboard, everything works just fine; unless we click the gap betweeen boxes. Then the entire gameboard will disappear and we will see the sybols of players on a blank screen. Because we've written our function considering the li elements only. Befor it was working normally because there were no click listeners on the OL element which is the blank areas between boxes. But now as we've added the eventlistener to our OL element, when we click the child elements which are the LI items, everything works fine, but if we click the gaps, we will be clicking the OL item, and as we added the click listener to the OL element, it reacts, and executes our function.
 // We can solve this problem easily. Check the function ont the game.js:
+
+nextRoundButton.addEventListener("click", closePlayerConfig);

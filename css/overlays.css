@@ -3,13 +3,14 @@
   top: 40%;
   left: 18.5%;
   width: 60%;
-  height: 10%;
+  height: 15%;
   background-color: rgb(114, 13, 204);
   padding: 1rem;
   color: black;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   display: none;
@@ -18,8 +19,20 @@
 #game-result p,
 #game-result h1 {
   color: rgb(215, 187, 247);
-  margin: 0 auto;
+  margin: 1rem auto;
   font-weight: bolder;
+}
+
+#game-result button {
+  margin-bottom: 1rem;
+  background-color: rgb(215, 187, 247) ;
+  color: rgb(131, 24, 224);
+  font-weight: bolder;
+}
+
+#game-result button:hover {
+  background-color: rgb(172, 95, 240);
+  color:  rgb(215, 187, 247) ;
 }
 
 .modal {

@@ -17,7 +17,7 @@ function closePlayerConfig() {
   errorsOutputElement.textContent = "";
   formElement.firstElementChild.lastElementChild.value = "";
   gameOverElement.style.display = "none";
-
+  resetGameBoard();
 }
 
 // ________ HANDLING FORM DATA:
