@@ -20,6 +20,8 @@ const players = [
 
 const playerConfigOverlayElement = document.getElementById("config-overlay");
 const backdropElement = document.getElementById("backdrop");
+const gameOverElement = document.getElementById("game-result");
+const gameOverElementText = document.getElementById("gamee");
 /* Note 02:
     These constants will be used within the functions which are created inside the config.js file but on the head section of our html file, config.js comes before this app.js file. So will this work? Will the functions in config.js file be able to see these constants?
 

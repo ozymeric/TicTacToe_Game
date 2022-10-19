@@ -62,7 +62,9 @@ function checkForWinner() {
         document.querySelector("#game-board li:nth-of-type(8)").textContent &&
         document.querySelector("#game-board li:nth-of-type(9)").textContent
       ){
-        console.log("It's a tie !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = "It's a tie baby!!!";
       }
    // __________________________________PLAYER 1 SCENARIO:
     
@@ -72,46 +74,62 @@ function checkForWinner() {
       gameData[0][0] === gameData[0][1] && 
       gameData[0][1] === gameData[0][2] &&
       gameData[0][2] === 1) {
-      console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     } else if (
       gameData[1][0] === gameData[1][1] && 
       gameData[1][1] === gameData[1][2] &&
       gameData[1][2] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     } else if (
       gameData[2][0] === gameData[2][1] && 
       gameData[2][1] === gameData[2][2] &&
       gameData[2][2] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     }
     // COLUMNS LOGIC:
     else if (
       gameData[0][0] === gameData[1][0] && 
       gameData[1][0] === gameData[2][0] &&
       gameData[2][0] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     } else if (
       gameData[0][1] === gameData[1][1] && 
       gameData[1][1] === gameData[2][1] &&
       gameData[2][1] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     } else if (
       gameData[0][2] === gameData[1][2] && 
       gameData[1][2] === gameData[2][2] &&
       gameData[2][2] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     }
     // DIAGONAL LOGIC:
     else if (
       gameData[0][0] === gameData[1][1] && 
       gameData[1][1] === gameData[2][2] &&
       gameData[2][2] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     } else if (
       gameData[0][2] === gameData[1][1] && 
       gameData[1][1] === gameData[2][0] &&
       gameData[2][0] === 1) {
-        console.log(playerOneName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerOneName.textContent + " WINS !!!";
     }
 
   
@@ -123,47 +141,63 @@ function checkForWinner() {
       gameData[0][0] === gameData[0][1] && 
       gameData[0][1] === gameData[0][2] &&
       gameData[0][2] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
     } else if (
       gameData[1][0] === gameData[1][1] && 
       gameData[1][1] === gameData[1][2] &&
       gameData[1][2] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
 
     } else if (
       gameData[2][0] === gameData[2][1] && 
       gameData[2][1] === gameData[2][2] &&
       gameData[2][2] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       }
     // COLUMNS LOGIC:
     else if (
       gameData[0][0] === gameData[1][0] && 
       gameData[1][0] === gameData[2][0] &&
       gameData[2][0] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       } else if (
       gameData[0][1] === gameData[1][1] && 
       gameData[1][1] === gameData[2][1] &&
       gameData[2][1] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       } else if (
       gameData[0][2] === gameData[1][2] && 
       gameData[1][2] === gameData[2][2] &&
       gameData[2][2] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       }
     // DIAGONAL LOGIC:
     else if (
       gameData[0][0] === gameData[1][1] && 
       gameData[1][1] === gameData[2][2] &&
       gameData[2][2] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       } else if (
       gameData[0][2] === gameData[1][1] && 
       gameData[1][1] === gameData[2][0] &&
       gameData[2][0] === 2) {
-      console.log(playerTwoName.textContent + " WINS !!!");
+        backdropElement.style.display = "block";
+        gameOverElement.style.display = "flex";
+        gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       }
   }
 }

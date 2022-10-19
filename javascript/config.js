@@ -16,6 +16,8 @@ function closePlayerConfig() {
   formElement.firstElementChild.classList.remove("error");
   errorsOutputElement.textContent = "";
   formElement.firstElementChild.lastElementChild.value = "";
+  gameOverElement.style.display = "none";
+
 }
 
 // ________ HANDLING FORM DATA:
