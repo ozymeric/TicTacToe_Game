@@ -3,7 +3,7 @@
   top: 40%;
   left: 18.5%;
   width: 60%;
-  height: 15%;
+  height: 30%;
   background-color: rgb(114, 13, 204);
   padding: 1rem;
   color: black;
@@ -21,18 +21,19 @@
   color: rgb(215, 187, 247);
   margin: 1rem auto;
   font-weight: bolder;
+  text-align: center;
 }
 
 #game-result button {
   margin-bottom: 1rem;
-  background-color: rgb(215, 187, 247) ;
+  background-color: rgb(215, 187, 247);
   color: rgb(131, 24, 224);
   font-weight: bolder;
 }
 
 #game-result button:hover {
   background-color: rgb(172, 95, 240);
-  color:  rgb(215, 187, 247) ;
+  color: rgb(215, 187, 247);
 }
 
 .modal {
