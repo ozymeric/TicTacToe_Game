@@ -10,6 +10,7 @@ function startNewGame() {
   activePlayerNameElement.textContent = players[0].name;
   activeGameArea.style.display = "block";
   document.getElementById("game-configuration").style.display = "none";
+  document.querySelector("header").style.padding = "1rem 5%";
   roundData.innerText = "Round " + roundCount;
   playerOneScoreData.innerText =
     playerOneName.textContent + " : " + playerOneScore;
