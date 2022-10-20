@@ -9,6 +9,11 @@ function startNewGame() {
   }
   activePlayerNameElement.textContent = players[0].name;
   activeGameArea.style.display = "block";
+  roundData.innerText = "Round " + roundCount;
+  playerOneScoreData.innerText =
+    playerOneName.textContent + " : " + playerOneScore;
+  playerTwoScoreData.innerText =
+    playerTwoName.textContent + " : " + playerTwoScore;
 }
 
 //*************************************************************************************************
@@ -112,26 +117,9 @@ function resetGameBoard() {
 function checkForWinner() {
   let clickedBox =
     gameData[event.target.dataset.row - 1][event.target.dataset.col - 1];
-  // __________________________________TIE SCENARIO:
-  if (
-    clickedBox > 0 &&
-    document.querySelector("#game-board li:nth-of-type(1)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(2)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(3)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(4)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(5)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(6)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(7)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(8)").textContent &&
-    document.querySelector("#game-board li:nth-of-type(9)").textContent
-  ) {
-    backdropElement.style.display = "block";
-    gameOverElement.style.display = "flex";
-    gameOverElementText.innerText = "It's a tie baby!!!";
-  }
-  // __________________________________PLAYER 1 SCENARIO:
+  // __________________________________PLAYER 2 SCENARIO:
   // ROWS LOGIC:
-  else if (clickedBox > 0 && clickedBox === 1) {
+  if (clickedBox > 0 && clickedBox === 1) {
     if (
       gameData[0][0] === gameData[0][1] &&
       gameData[0][1] === gameData[0][2] &&
@@ -291,17 +279,36 @@ function checkForWinner() {
       gameOverElementText.innerText = playerTwoName.textContent + " WINS !!!";
       playerTwoScore++;
     }
+    // __________________________________TIE SCENARIO:
+    else if (
+      clickedBox > 0 &&
+      document.querySelector("#game-board li:nth-of-type(1)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(2)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(3)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(4)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(5)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(6)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(7)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(8)").textContent &&
+      document.querySelector("#game-board li:nth-of-type(9)").textContent
+    ) {
+      backdropElement.style.display = "block";
+      gameOverElement.style.display = "flex";
+      gameOverElementText.innerText = "It's a tie baby!!!";
+    }
   }
 }
 
 //*************************************************************************************************
-//************************************** 9 ROUNDS OF PLAY *****************************************
+//********************** RESTARTING GAME & KEEPING TRACK OF PLAYER SCORES *************************
 //*************************************************************************************************
 
 function restartGame() {
   closePlayerConfig();
   roundCount++;
-  console.log("Round " + roundCount + " result:");
-  console.log(playerOneName.textContent + " : " + playerOneScore);
-  console.log(playerTwoName.textContent + " : " + playerTwoScore);
+  roundData.innerText = "Round " + roundCount;
+  playerOneScoreData.innerText =
+    playerOneName.textContent + " : " + playerOneScore;
+  playerTwoScoreData.innerText =
+    playerTwoName.textContent + " : " + playerTwoScore;
 }

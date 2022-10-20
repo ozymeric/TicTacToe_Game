@@ -21,7 +21,7 @@ const players = [
 
 let editedPlayer = 0;
 let activePlayer = 0;
-let roundCount = 0;
+let roundCount = 1;
 
 let playerOneScore = 0;
 let playerTwoScore = 0;
@@ -54,6 +54,10 @@ const gameBoardElement = document.getElementById("game-board");
 const errorsOutputElement = document.getElementById("config-errors");
 
 const activePlayerNameElement = document.getElementById("active-player-name");
+
+const roundData = document.getElementById("round-data");
+const playerOneScoreData = document.getElementById("player-one-score-data");
+const playerTwoScoreData = document.getElementById("player-two-score-data");
 
 //*************************************************************************************************
 //*************************************************************************************************
