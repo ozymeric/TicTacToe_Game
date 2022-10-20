@@ -65,4 +65,8 @@
     left: calc(50% - 20rem);
     width: 40rem;
   }
+
+  #inner-data-div {
+    width: 40%;
+  }
 }
