@@ -71,7 +71,7 @@ editPlayer2BtnElement.addEventListener("click", openPlayerConfig);
 cancelConfigBtnElement.addEventListener("click", closePlayerConfig);
 
 //backdrop element
-backdropElement.addEventListener("click", closePlayerConfig);
+// backdropElement.addEventListener("click", closePlayerConfig);
 
 //form element
 formElement.addEventListener("submit", savePlayerConfig);
