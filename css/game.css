@@ -61,6 +61,8 @@
 #score-data-div {
   display: flex;
   flex-direction: column;
+  width: 40%;
+  margin: auto;
 }
 
 #round-data {
@@ -84,4 +86,9 @@
   margin: 0.1rem auto;
   border-radius: 0.5rem;
   padding: 0.5rem;
+}
+
+#inner-data-div {
+  display: flex;
+  align-items: center;
 }
